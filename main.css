@@ -1,0 +1,39 @@
+nav {
+    width: 100%;
+    display: inline-block;
+}
+nav ul{
+    list-style: none;
+}
+.nav-lefttab {
+    float: left;
+}
+.nav-righttab {
+    float: right;
+}
+
+p {
+    margin-top: 20px;
+    color: gray;
+}
+
+nav a{
+    color: balck;
+    font-weight: bold;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #db3434;
+}
+
+
+.nav-center {
+    width:200px;
+        height:30px;
+        border: 2px solid rgb(78, 227, 119);
+        text-align: center;
+}

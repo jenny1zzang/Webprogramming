@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="register.css">
+        <title>Register</title>
+        <script>
+            function validate() {
+                if (document.register_form.input_name.value == "") {
+                    alert("Please provide your name!");
+                    document.register_form.input_name.focus();
+                    return false;
+                }
+
+                if (document.register_form.input_email.value == "") {
+                    alert("Please provide your email!");
+                    document.register_form.input_email.focus();
+                    return false;
+                }
+
+                if (document.register_form.input_password.value == "") {
+                    alert("Please provide your password!");
+                    document.register_form.input_password.focus();
+                    return false;
+                }
+                if (document.register_form.input_password_check.value == "") {
+                    alert("Please fill in the password check field!");
+                    document.register_form.input_password_check.focus();
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Sign Up</h2>
+            <hr>
+            <form action="register_ok.php" method="post" name="register_form" onsubmit="return validate()">
+                <div>
+                    <label for="name">Name</label><br>
+                    <input name="input_name" id="name" type="text">
+                </div>
+                <div>
+                    <label for="email">Email</label><br>
+                    <input name="input_email" id="email" type="email">
+                </div>
+                <div>
+                    <label for="password">Password</label><br>
+                    <input name="input_password" id="password" type="password">
+                </div>
+                <div>
+                    <label for="password_check">Password Check</label><br>
+                    <input name="input_password_check" id="password_check" type="password">
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p class="pre_text">Don't have an account? <a href="login.php">Login.</a></p>
+        </div>
+    </body>
+</html>
